@@ -5,7 +5,7 @@ set -e
 
 INSTALL_DIR="/usr/local"
 BIN_DIR="$INSTALL_DIR/bin"
-PHP_DIR="$INSTALL_DIR/php"
+PHP_DIR="$INSTALL_DIR/phabricator"
 
 if [ ! -e "$PHP_DIR" ]; then
     mkdir -p $PHP_DIR
@@ -18,7 +18,6 @@ if [ -e "$PHP_DIR/libphutil" ]; then
 else
     git clone git://github.com/facebook/libphutil.git "$PHP_DIR/libphutil"
     git clone git://github.com/facebook/arcanist.git "$PHP_DIR/arcanist"
-    git clone git://github.com/facebook/phabricator.git "$PHP_DIR/phabricator"
 fi
 
 # Register arc commands
